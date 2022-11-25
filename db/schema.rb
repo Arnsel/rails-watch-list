@@ -67,11 +67,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_110312) do
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "list_id"
+    t.bigint "list_id"
+    t.index ["list_id"], name: "index_movies_on_list_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "lists"
   add_foreign_key "bookmarks", "movies"
+  add_foreign_key "movies", "lists"
 end
