@@ -1,26 +1,28 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dfzylc7wo/image/upload/v1669384819/development/myke-simon-atsUqIm3wxo-unsplash_zj27vh.jpg);">
-  <div class="container">
-    <h1>Movie lover?</h1>
-    <p>Create move list - and share them with your friends!</p>
-  </div>
-</div>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8">
-      <% @lists.each do |list| %>
-        <div class="card-trip">
-          <img src="<%= cl_image_path(list.photo.key) %>">
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to list.name, list_path(list)%></h2>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dfzylc7wo/image/upload/v1669384819/development/myke-simon-atsUqIm3wxo-unsplash_zj27vh.jpg);">
+    <div class="container">
+      <h1>Movie lover?</h1>
+      <p>Create move lists - and share them with your friends!</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div display="flex justify-content-center">
+      <div class="col-12 col-md-8">
+        <% @lists.each do |list| %>
+          <div class="card-trip">
+            <img src="<%= cl_image_path(list.photo.key) %>">
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to list.name, list_path(list)%></h2>
+              </div>
             </div>
           </div>
+        <% end %>
+        <div>
+          <%= link_to "Create a new list", new_list_path, class: "btn btn-primary"%>
         </div>
-      <% end %>
-      <div>
-        <%= link_to "Create a new list", new_list_path, class: "btn btn-primary"%>
       </div>
     </div>
   </div>
-</div>
+
