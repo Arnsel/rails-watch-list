@@ -6,11 +6,8 @@
     </div>
   </div>
 
-  <div class="container">
-    <div display="flex justify-content-center">
-      <div class="col-12 col-md-8">
         <% @lists.each do |list| %>
-          <div class="card-trip">
+          <div class="card">
             <img src="<%= cl_image_path(list.photo.key) %>">
             <div class="card-trip-infos">
               <div>
@@ -22,7 +19,3 @@
         <div>
           <%= link_to "Create a new list", new_list_path, class: "btn btn-primary"%>
         </div>
-      </div>
-    </div>
-  </div>
-
