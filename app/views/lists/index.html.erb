@@ -6,16 +6,11 @@
     </div>
   </div>
 
-        <% @lists.each do |list| %>
-          <div class="card">
-            <img src="<%= cl_image_path(list.photo.key) %>">
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= link_to list.name, list_path(list)%></h2>
-              </div>
-            </div>
-          </div>
-        <% end %>
-        <div>
-          <%= link_to "Create a new list", new_list_path, class: "btn btn-primary"%>
-        </div>
+<a href='#' class="box">
+    <img src="https://assets.nflxext.com/us/boxshots/tv_sdp_s/70143813.jpg" alt="img">
+    <div class="overlay">
+      <h3 class="title" href='#'>Lorem, ipsum dolor</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem beatae.</p>
+    </div>
+    </a>
+
