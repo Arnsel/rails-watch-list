@@ -1,0 +1,32 @@
+.banner {
+  background-image: url(banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.banner h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.banner-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.2s;
+}
+
+.banner-btn:hover {
+  background-color: #555;
+}
